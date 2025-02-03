@@ -70,7 +70,7 @@ JWT_SECRET=your-secret-key
 
 ---
 
-## 🌍 Deployment on AWS (feature plan)
+## 🌍 Deployment on AWS (feature plan, not implemented)
 
 ### Client (Next.js)
 1. Use **AWS Amplify** or **Vercel** for deployment.
