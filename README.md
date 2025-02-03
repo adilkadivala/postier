@@ -3,12 +3,12 @@
 A full-stack web application built with **Next.js** (frontend) and **Express.js** (backend). This project provides a seamless user experience with server-side rendering, efficient API handling, and a robust backend.
 
 ## Features
-- 🔹 **Next.js Frontend** with SSR & Static Generation
-- 🔹 **Express.js Backend** for API handling
-- 🔹 **AWS Hosting** for both client and server
-- 🔹 **FullCalendar Integration** for event management
-- 🔹 **Database Support** (if applicable, specify MySQL, MongoDB, etc.)
-- 🔹 **Authentication & Authorization** (if implemented)
+🔹 **Next.js Frontend** with SSR & Static Generation
+🔹 **Express.js Backend** for API handling
+🔹 **AWS Hosting** for both client and server
+🔹 **FullCalendar Integration** for event management
+🔹 **Database Support** (if applicable, specify MySQL, MongoDB, etc.)
+🔹 **Authentication & Authorization** (if implemented)
 
 ---
 
@@ -70,7 +70,7 @@ JWT_SECRET=your-secret-key
 
 ---
 
-## 🌍 Deployment on AWS
+## 🌍 Deployment on AWS (feature plan)
 
 ### Client (Next.js)
 1. Use **AWS Amplify** or **Vercel** for deployment.
@@ -94,10 +94,6 @@ JWT_SECRET=your-secret-key
 
 ---
 
-## 🤝 Contributing
-Feel free to contribute to this project by submitting PRs or opening issues.
-
----
 
 ## 📜 License
 This project is **MIT licensed**.
