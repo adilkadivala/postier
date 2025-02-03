@@ -1,0 +1,15 @@
+services:
+  postgres:
+    container_name: postier
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment: 
+      POSTGRES_USER: socialuser
+      POSTGRES_DB: postierdb
+      POSTGRES_PASSWORD: socialpassword
+
+volumes:
+  postgres_data:
