@@ -29,6 +29,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <title>Postier</title>
+        </head>
         <body
           className={`${primary.className} ${secondry.variable} antialiased`}
         >

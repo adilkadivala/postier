@@ -10,7 +10,7 @@ type Props = {
 const DashboardLayout = ({ children }: Props) => {
   return (
     <>
-      <DashNavbar />
+      {/* <DashNavbar />    */}
       <div className="w-100 h-100 flex">
         <aside className="border-r border-slate-400 w-1/6 h-[92vh]">
           <div className="flex flex-col items-center border-b border-slate-400 h-3/5">
