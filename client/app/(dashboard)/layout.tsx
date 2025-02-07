@@ -1,30 +1,47 @@
-import DashNavbar from "@/components/dashboard-nav";
-import Theme from "@/components/theme";
-import Link from "next/link";
-import React from "react";
+import { AppSidebar } from "@/components/app-sidebar";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { Separator } from "@/components/ui/separator";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
 
-type Props = {
-  children: React.ReactNode;
-};
-
-const DashboardLayout = ({ children }: Props) => {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      {/* <DashNavbar />    */}
-      <div className="w-100 h-100 flex">
-        <aside className="border-r border-slate-400 w-1/6 h-[92vh]">
-          <div className="flex flex-col items-center border-b border-slate-400 h-3/5">
-            <Link href="/history">History</Link>
-            <Link href="/schedule">Schedule</Link>
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset>
+        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+          <div className="flex items-center gap-2 px-4">
+            <SidebarTrigger className="-ml-1" />
+            <Separator orientation="vertical" className="mr-2 h-4" />
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem className="hidden md:block">
+                  <BreadcrumbLink href="#">
+                    Building Your Application
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="hidden md:block" />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
           </div>
-          <div className="flex flex-col items-center h-2/5">
-            <Theme />
-          </div>
-        </aside>
-        <main className="w-5/6 p-5 h-[92vh] overflow-y-auto">{children}</main>
-      </div>
-    </>
+        </header>
+        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+          <main>{children}</main>
+        </div>
+      </SidebarInset>
+    </SidebarProvider>
   );
-};
-
-export default DashboardLayout;
+}
