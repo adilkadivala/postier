@@ -5,6 +5,7 @@ import { IconMenu2, IconX } from "@tabler/icons-react";
 import { Brand } from "@/public";
 import Image from "next/image";
 import Link from "next/link";
+import { Send } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Header() {
       <div className="container flex h-14 items-center justify-between px-3">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src={Brand} alt="logo" />
+          <Send />
         </Link>
 
         {/* Desktop Navigation */}

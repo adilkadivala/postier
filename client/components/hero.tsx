@@ -56,7 +56,7 @@ export default function Hero() {
         <div className="flex justify-center">
           <div className="relative rounded-full px-1 md:px-5 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-300 dark:ring-gray-700/10 dark:hover:ring-gray-700/20 backdrop-blur-sm bg-white/30 dark:bg-gray-800/30">
             busy today !! we'll <span className="animate-pulse">🚀 </span> post
-            behalf you,
+            on behalf you
           </div>
         </div>
 
