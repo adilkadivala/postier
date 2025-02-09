@@ -15,7 +15,7 @@ const Theme = () => {
 
   return (
     <Select onValueChange={setTheme} value={theme}>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-full">
         <SelectValue placeholder="Theme" />
       </SelectTrigger>
       <SelectContent>

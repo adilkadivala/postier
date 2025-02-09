@@ -1,42 +1,70 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+"use client";
+
+import {
+  Calendar,
+  CalendarCheck2,
+  ChartNoAxesColumn,
+  History,
+  MessageSquareShare,
+  Send,
+} from "lucide-react";
 
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarGroupContent,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
+import { Separator } from "./ui/separator";
+import Theme from "./theme";
 
-// Menu items.
-const items = [
+const headingItem = [
   {
-    title: "Home",
-    url: "#",
-    icon: Home,
+    title: "Postier",
+    url: "/",
+    icon: Send,
+  },
+];
+
+const menuItems = [
+  {
+    title: "Analytics",
+    url: "/history",
+    icon: ChartNoAxesColumn,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: "Schedule",
+    url: "/history",
+    icon: CalendarCheck2,
   },
   {
     title: "Calendar",
-    url: "#",
+    url: "/history",
     icon: Calendar,
   },
   {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    title: "Create-Post",
+    url: "/post",
+    icon: MessageSquareShare,
   },
   {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
+    title: "History",
+    url: "/history",
+    icon: History,
+    items: [
+      {
+        title: "Posted",
+        url: "/posted",
+      },
+      {
+        title: "Pending",
+        url: "/pending",
+      },
+    ],
   },
 ];
 
@@ -45,21 +73,49 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarMenu>
+            {headingItem.map((item) => (
+              <SidebarMenuItem key={item.title}>
+                <SidebarMenuButton asChild>
+                  <Link
+                    href={item.url}
+                    className="flex items-center gap-2 py-3"
+                  >
+                    <item.icon className="text-indigo-600 animate-pulse dark:text-zinc-200" />
+                    <span className="text-slate-900 font-bold dark:text-zinc-200">
+                      {item.title}
+                    </span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
+            <Separator />
+          </SidebarMenu>
+
+          {/* Sidebar menu */}
           <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
+            <SidebarMenu className="pt-5 h-96">
+              {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url} className="flex items-center gap-2">
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
+            <Separator />
           </SidebarGroupContent>
+
+          <SidebarMenu className="pt-4">
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild>
+                <Theme />
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
