@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  Calendar,
-  CalendarCheck2,
+  CalendarCheck,
   ChartNoAxesColumn,
+  ClockArrowUp,
   History,
   MessageSquareShare,
   Send,
@@ -22,6 +22,8 @@ import Link from "next/link";
 import { Separator } from "./ui/separator";
 import Theme from "./theme";
 
+
+
 const headingItem = [
   {
     title: "Postier",
@@ -32,19 +34,14 @@ const headingItem = [
 
 const menuItems = [
   {
+    title: "History",
+    url: "/history",
+    icon: History,
+  },
+  {
     title: "Analytics",
     url: "/history",
     icon: ChartNoAxesColumn,
-  },
-  {
-    title: "Schedule",
-    url: "/history",
-    icon: CalendarCheck2,
-  },
-  {
-    title: "Calendar",
-    url: "/history",
-    icon: Calendar,
   },
   {
     title: "Create-Post",
@@ -52,19 +49,14 @@ const menuItems = [
     icon: MessageSquareShare,
   },
   {
-    title: "History",
+    title: "Scheduled",
     url: "/history",
-    icon: History,
-    items: [
-      {
-        title: "Posted",
-        url: "/posted",
-      },
-      {
-        title: "Pending",
-        url: "/pending",
-      },
-    ],
+    icon: ClockArrowUp,
+  },
+  {
+    title: "Posted",
+    url: "/history",
+    icon: CalendarCheck,
   },
 ];
 
