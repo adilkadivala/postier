@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "db:generate": "npx prisma generate",
     "db:migrate": "npx prisma migrate dev --name",
     "db:studio": "npx prisma studio"
@@ -23,12 +23,18 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.9",
     "prisma": "^6.3.0",
     "resend": "^4.1.1",
-    "twitter-api-v2": "^1.19.0"
+    "twitter-api-v2": "^1.19.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1"
   }
 }
