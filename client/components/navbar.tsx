@@ -9,25 +9,22 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header
-      className="sticky top-0 z-50 w-[100vw] bg-background/95 backdrop-blur'
-     supports-[backdrop-filter]:bg-background/60"
-    >
-      <div className="container flex h-14 w-full items-center justify-between px-3">
+    <header className="sticky top-0 z-50  bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 w-full items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center w-1/6">
+        <Link href="/" className="flex items-center w-1/4">
           <Send className="animate-bounce text-indigo-600" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center justify-center space-x-10 text-sm font-medium w-4/6">
+        <nav className="hidden md:flex items-center justify-center space-x-10 text-sm font-medium w-2/4">
           <Link href="#features">Features</Link>
           <Link href="#pricing">Pricing</Link>
           <Link href="#contact">Contact</Link>
         </nav>
 
         {/* CTA Button (Desktop) */}
-        <div className="w-1/6 hidden md:flex items-center justify-end">
+        <div className=" hidden md:flex items-center justify-end w-1/4">
           <Link
             href="/history"
             className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
