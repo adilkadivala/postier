@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Geometric Background */}
       <div className="absolute inset-0 -z-10 -top-1 overflow-hidden flex items-center justify-center">
         <svg
-          className="absolute inset-0 w-full h-full stroke-gray-200 dark:stroke-slate-900"
+          className="absolute inset-0 w-full h-full stroke-gray-200 dark:stroke-slate-800"
           aria-hidden="true"
         >
           <defs>

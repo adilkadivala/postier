@@ -13,7 +13,7 @@ export default function Page() {
 
   useEffect(() => {
     if (isLoaded && isSignedIn) {
-      router.push("/history");
+      router.push("/");
     }
   }, [isSignedIn, isLoaded, router]);
 
