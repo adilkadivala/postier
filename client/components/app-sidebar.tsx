@@ -50,7 +50,7 @@ const menuItems = [
   },
   {
     title: "Scheduled",
-    url: "/history",
+    url: "/schedule",
     icon: ClockArrowUp,
   },
   {
