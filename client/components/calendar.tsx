@@ -128,10 +128,9 @@ const Calendar: React.FC<CalendarProps> = ({ events: initialEvents }) => {
                         key={ev.id}
                         draggable
                         onDragStart={(e) => dragDrop.handleDragStart(e, ev)}
-                        className={`p-1 px-2 text-xs rounded-sm cursor-move ${
-                          ev.color || "bg-blue-200 text-blue-800"
-                        } ${
-                          position === "start"
+                        className={`p-1 px-2 text-xs rounded-sm cursor-move 
+                          ${ev.color || "bg-blue-200 text-blue-800"} 
+                          ${position === "start"
                             ? "rounded-l-full"
                             : position === "end"
                             ? "rounded-r-full"

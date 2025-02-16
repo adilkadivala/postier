@@ -53,6 +53,15 @@ export class DragDrop {
     e.dataTransfer.dropEffect = "move";
   }
 
+
+
+  handleDragBlock(e: React.DragEvent): void {
+    e.preventDefault();
+    // if (condition) {
+      
+    // }
+  }
+
   clearHighlights(): void {
     const dropzones = document.querySelectorAll(".dropzone");
     dropzones.forEach((zone) => zone.classList.remove("bg-gray-200"));
