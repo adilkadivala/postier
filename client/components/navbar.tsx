@@ -9,8 +9,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50  bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 w-full items-center justify-between">
+    <header className="sticky top-0 z-50 bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="flex h-14 mx-auto w-5/6 items-center justify-between md:justify-center">
         {/* Logo */}
         <Link href="/" className="flex items-center w-1/4">
           <Send className="animate-bounce text-indigo-600" />
@@ -36,7 +36,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2.5 text-gray-700"
+          className="md:hidden p-2.5 text-zinc-500"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -50,7 +50,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <nav
-          className="flex inset-0 z-40 bg-slate-200/5 shadow-md md:hidden flex-col items-center
+          className="flex inset-0 z-40 bg-slate-200/5 py-5 shadow-md md:hidden flex-col items-center
          justify-center space-y-6"
         >
           <Link

@@ -1,12 +1,20 @@
-"use client";
-import Hero from "@/components/hero";
-import Navbar from "@/components/navbar";
+"use client"
+import BackgroundPattern from "@/components/BackgroundPattern"
+import Clouds from "@/components/clouds"
+import Hero from "@/components/hero"
+import Navbar from "@/components/navbar"
 
 export default function Home() {
   return (
-    <div className="px-5 w-full h-full">
+    <div className="w-full min-h-screen">
       <Navbar />
-      <Hero />
+      <BackgroundPattern>
+        <main className="pt-14">
+          <Hero />
+          <Clouds />
+        </main>
+      </BackgroundPattern>
     </div>
-  );
+  )
 }
+

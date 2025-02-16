@@ -1,41 +1,3 @@
-// import express from "express";
-// import env from "dotenv";
-// import cors from "cors";
-// import bodyParser from "body-parser";
-// import session from "express-session";
-// import twitterServices from "./src/services/twitter.js";
-// import CronJob from "cron";
-
-// env.config();
-
-// const app = express();
-// const PORT = process.env.SERVER_PORT || 8000;
-
-// app.use(cors());
-// app.use(bodyParser.json());
-// app.use(express.json());
-// app.use(
-//   session({
-//     secret: process.env.SESSION_SECRET || "default-secret",
-//     resave: false,
-//     saveUninitialized: true,
-//   })
-// );
-
-// const tweet = async () => {
-//   try {
-//     await twitterServices.v2.tweet("Hello world!");
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-// tweet();
-
-// app.listen(PORT, () => {
-//   console.log(`server is running on http://localhost:${PORT}`);
-// });
-
 import express from "express";
 import { TwitterApi } from "twitter-api-v2";
 import dotenv from "dotenv";
@@ -46,34 +8,33 @@ import bodyParser from "body-parser";
 
 dotenv.config();
 
-
-
 const corsOptions = {
-  credentials: "true",
-  methods: "GET,POST,PUT,DELETE",
-  origin: "http://localhost:3000",
-  allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+    methods: "GET,POST,PUT,DELETE",
+    origin: "http://localhost:3000",
+    allowedHeaders: ["Content-Type", "Authorization"],
 };
 
 const app = express();
 const PORT = process.env.SERVER_PORT || 8000;
 
-
-
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); // CORS middleware must be FIRST
 app.use(express.json());
-app.use(bodyParser.json())
-
-
-
+app.use(bodyParser.json());
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "your_secret_key",
+    secret: process.env.SESSION_SECRET || "thisismymostlovableproject",
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false, // Change from `true` to `false` to avoid setting unnecessary sessions
+    cookie: {
+      secure: false, // Change to `true` if using HTTPS
+      httpOnly: true,
+      sameSite: "lax",
+    },
   })
 );
+
 
 const twitterClient = new TwitterApi({
   clientId: process.env.TWITTER_CLIENT_ID,
@@ -144,7 +105,7 @@ app.get('/callback', async (req, res) => {
       console.log("Access Token:", accessToken);
       console.log("Refresh Token:", refreshToken);
 
-      res.redirect('/success');
+      res.redirect('http://localhost:3000/schedule');
   } catch (error) {
       console.error('Error getting access token:', error);
 
@@ -162,7 +123,6 @@ app.get("/success", (req, res) => {
   res.send(
     "Successfully authenticated! Access token is available (but should be stored securely)."
   );
-  res.redirect("/tweet")
 });
 
 // Step 4: Route to post a tweet (after authentication)

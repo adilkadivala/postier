@@ -45,7 +45,7 @@ const menuItems = [
   },
   {
     title: "Create-Post",
-    url: "/post",
+    url: "/history",
     icon: MessageSquareShare,
   },
   {
