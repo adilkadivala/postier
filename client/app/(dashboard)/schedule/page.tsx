@@ -3,14 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
     const [tweet, setTweet] = useState("");
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
 
-    
+
     const handleLogin = () => {
         window.location.href = "http://localhost:8000/auth";
     };
