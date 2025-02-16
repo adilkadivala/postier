@@ -9,8 +9,8 @@ export default function Home() {
     const [tweet, setTweet] = useState("");
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
-    const router = useRouter();
 
+    
     const handleLogin = () => {
         window.location.href = "http://localhost:8000/auth";
     };
