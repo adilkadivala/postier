@@ -35,11 +35,12 @@ const Clouds = () => {
   ];
 
   return (
-    <div className="py-5 md:py-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="py-5 md:py-10 ">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 border-b-2 border-dashed pb-10">
+     
         <h2 className="text-center text-lg/8 font-semibold text-gray-900 dark:text-zinc-200">
           Trusted by the world&#39;s most innovative{" "}
-          <span className="border-b-2 border-b-stone-500 dark:border-b-zinc-400 border-dashed">
+          <span className="border-b-2 border-b-indigo-600 dark:border-b-zinc-400 border-dashed">
             Startups
           </span>
         </h2>
@@ -56,6 +57,7 @@ const Clouds = () => {
             />
           ))}
         </div>
+        
       </div>
     </div>
   );
