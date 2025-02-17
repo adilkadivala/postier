@@ -1,14 +1,10 @@
-// import { TwitterApi } from "twitter-api-v2";
-// import dotenv from "dotenv";
+const TwitterApi = require("twitter-api-v2").default;
 
-// dotenv.config();
+const twitterClientService = new TwitterApi({
+  clientId: process.env.TWITTER_CLIENT_ID,
+  clientSecret: process.env.TWITTER_CLIENT_SECRET,
+  accessToken: process.env.TWITTER_ACCESS_TOKEN,
+  accessSecret: process.env.TWITTER_ACCESS_SECRET,
+});
 
-// const twitterServices = new TwitterApi({
-//   appKey: process.env.TWITTER_API_KEY,
-//   appSecret: process.env.TWITTER_API_SECRET,
-//   accessToken: process.env.TWITTER_ACCESS_TOKEN,
-//   accessSecret: process.env.TWITTER_ACCESS_SECRET,
-// });
-
-// export default twitterServices;
-
+module.exports = twitterClientService;

@@ -22,8 +22,8 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 w-full sm:mt-20 lg:mt-24 ">
-          <dl className="flex flex-wrap flex-col md:flex-row gap-y-10">
+        <div className="mx-auto mt-16 w-full sm:mt-20 lg:mt-24">
+          <dl className="flex flex-wrap flex-col md:flex-row gap-y-16">
             <div className="relative pl-16 w-full md:w-1/2 lg:w-1/3">
               <dt className="text-base/7 font-semibold text-gray-900 dark:text-zinc-200">
                 <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
@@ -53,7 +53,7 @@ const Features = () => {
                 <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
                   <Repeat2 className="text-zinc-200" />
                 </div>
-                Simple queues posts
+                Simple posts queue
               </dt>
               <dd className="mt-2 text-base/7 text-gray-900 dark:text-zinc-200">
                 Quisque est vel vulputate cursus. Risus proin diam nunc commodo.
