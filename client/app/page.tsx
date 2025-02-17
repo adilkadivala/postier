@@ -1,6 +1,7 @@
 "use client"
 import BackgroundPattern from "@/components/BackgroundPattern"
 import Clouds from "@/components/clouds"
+import Features from "@/components/features"
 import Hero from "@/components/hero"
 import Navbar from "@/components/navbar"
 
@@ -9,9 +10,10 @@ export default function Home() {
     <div className="w-full min-h-screen">
       <Navbar />
       <BackgroundPattern>
-        <main className="pt-14">
+        <main>
           <Hero />
           <Clouds />
+          <Features />
         </main>
       </BackgroundPattern>
     </div>

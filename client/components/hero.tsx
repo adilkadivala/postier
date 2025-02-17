@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -26,7 +27,7 @@ export default function Hero() {
         </div>
 
         <div className="text-center py-20 border-b-2 border-dashed">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">Schedule Your Social Media Posts with <span className="border-b-2 border-b-stone-500 dark:border-b-zinc-400 border-dashed">Ease</span>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">Schedule Your Social Media Posts with <span className="border-b-2 border-b-indigo-600 dark:border-b-zinc-400 border-dashed">Ease</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
             Postier helps you maintain an active social media presence even on
@@ -34,18 +35,18 @@ export default function Hero() {
             the rest.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6 ">
-            <a
-              href="#"
+            <Link
+              href="/history"
               className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Get started
-            </a>
-            <a
+            </Link>
+            <Link
               href="#features"
               className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
             >
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
