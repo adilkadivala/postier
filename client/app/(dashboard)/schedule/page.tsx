@@ -1,19 +1,9 @@
-
-import { Button } from "@/components/ui/button";
-import MakeXPost from "@/features/x/components/text-area";
-import { handleLogin } from "@/features/x/hooks/connect-account";
-
+import MakeXPost from "@/features/x/components/write-post";
 
 export default function Home() {
-    
-
-
-    
-
-    return (
-        <>
-       
-        <MakeXPost />
-        </>
-    );
+  return (
+    <>
+      <MakeXPost />
+    </>
+  );
 }
