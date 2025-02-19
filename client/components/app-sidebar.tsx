@@ -6,7 +6,7 @@ import {
   ClockArrowUp,
   History,
   MessageSquareShare,
-  Send,
+  PlaneTakeoff,
 } from "lucide-react";
 
 import {
@@ -28,7 +28,7 @@ const headingItem = [
   {
     title: "Postier",
     url: "/",
-    icon: Send,
+    icon: PlaneTakeoff,
   },
 ];
 

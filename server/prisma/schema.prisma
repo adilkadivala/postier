@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,14 +8,15 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  clerkId   String   @unique @map("clerk_id")
-  name      String
-  email     String   @unique
-  password  String 
-  posts     Post[]
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  id             String          @id @default(uuid())
+  clerkId        String          @unique @map("clerk_id")
+  name           String
+  email          String          @unique
+  password       String
+  posts          Post[]
+  socialAccounts SocialAccount[] 
+  createdAt      DateTime        @default(now()) @map("created_at")
+  updatedAt      DateTime        @updatedAt @map("updated_at")
 
   @@map("users")
 }
@@ -30,12 +25,27 @@ model Post {
   id          String    @id @default(uuid())
   title       String
   content     String
-  scheduledAt DateTime? @map("scheduled_at")
-  posted      Boolean   @default(false) 
+  mediaUrl    String? 
+  scheduledAt DateTime? @map("scheduled_at") 
+  postedAt    DateTime? @map("posted_at") 
+  status      String    @default("pending") 
+  attempts    Int       @default(0) 
   authorId    String    @map("author_id")
   author      User      @relation(fields: [authorId], references: [id])
   createdAt   DateTime  @default(now()) @map("created_at")
   updatedAt   DateTime  @updatedAt @map("updated_at")
 
   @@map("posts")
+}
+
+model SocialAccount {
+  id           String    @id @default(uuid())
+  userId       String    @map("user_id")
+  platform     String 
+  accessToken  String
+  refreshToken String?
+  expiresAt    DateTime?
+  user         User      @relation(fields: [userId], references: [id])
+
+  @@map("social_accounts")
 }

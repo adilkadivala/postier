@@ -11,5 +11,21 @@ import FifthLogoDark from "./logo-fifth.svg";
 import FifthLogoWhite from "./fifth-logo-white.svg";
 import Feature from "./feature_2.png";
 import Feature1 from "./feature_1.png";
+import FavIcon from "./favicon.svg";
 
-export { Brand, FirstLogoWhite, FirstLogoDark, SecondLogoDark, SecondLogoWhite, ThirdLogoDark, ThirdLogoWhite, ForthLogoDark, ForthLogoWhite, FifthLogoDark, FifthLogoWhite, Feature, Feature1  };
+export {
+  Brand,
+  FirstLogoWhite,
+  FirstLogoDark,
+  SecondLogoDark,
+  SecondLogoWhite,
+  ThirdLogoDark,
+  ThirdLogoWhite,
+  ForthLogoDark,
+  ForthLogoWhite,
+  FifthLogoDark,
+  FifthLogoWhite,
+  Feature,
+  Feature1,
+  FavIcon
+};

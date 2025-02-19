@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
-import { Send } from "lucide-react";
+import { PlaneTakeoff } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,8 +12,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-14 mx-auto w-5/6 items-center justify-between md:justify-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center w-1/4">
-          <Send className="animate-bounce text-indigo-600" />
+        <Link href="/" className="flex items-center w-1/4 font-semibold">
+          <span className="flex items-center">P<span><PlaneTakeoff /></span>stier</span>
         </Link>
 
         {/* Desktop Navigation */}

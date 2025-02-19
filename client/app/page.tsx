@@ -1,9 +1,11 @@
-"use client"
-import BackgroundPattern from "@/components/BackgroundPattern"
-import Clouds from "@/components/clouds"
-import Features from "@/components/features"
-import Hero from "@/components/hero"
-import Navbar from "@/components/navbar"
+"use client";
+import BackgroundPattern from "@/components/BackgroundPattern";
+import Clouds from "@/components/clouds";
+import Features from "@/components/features";
+import Footer from "@/components/footer";
+import Hero from "@/components/hero";
+import Navbar from "@/components/navbar";
+import Pricing from "@/components/pricing";
 
 export default function Home() {
   return (
@@ -14,9 +16,10 @@ export default function Home() {
           <Hero />
           <Clouds />
           <Features />
+          <Pricing />
         </main>
       </BackgroundPattern>
+      <Footer />
     </div>
-  )
+  );
 }
-

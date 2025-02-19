@@ -7,10 +7,10 @@ import { generateDays } from "@/lib/utils";
 import { DragDrop, type Event } from "@/services/drag-drop";
 
 interface CalendarProps {
-  events: Event[];
+  posts: Event[];
 }
 
-const Calendar: React.FC<CalendarProps> = ({ events: initialEvents }) => {
+const Calendar: React.FC<CalendarProps> = ({ posts: initialEvents }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [events, setEvents] = useState<Event[]>(initialEvents);
 
@@ -119,7 +119,7 @@ const Calendar: React.FC<CalendarProps> = ({ events: initialEvents }) => {
           >
             {day && (
               <>
-                <div className="font-semibold mb-1">{day}</div>
+                <div className="mb-1">{day}</div>
                 <div className="flex flex-col gap-1">
                   {dragDrop.getEventsForDate(day).map((ev) => {
                     const position = getEventPosition(ev, day);
