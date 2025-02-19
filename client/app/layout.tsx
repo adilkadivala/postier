@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 
+
 const primary = Poppins({
   weight: ["400", "700", "100", "200", "300", "500", "600", "800", "900"],
   style: ["normal", "italic"],
@@ -31,6 +32,12 @@ export default function RootLayout({
       <html lang="en">
         <head>
           <title>Postier</title>
+          <link
+            rel="icon"
+            href="./favicon.svg"
+            type="image/<generated>"
+            sizes="<generated>"
+          />
         </head>
         <body
           className={`${primary.className} ${secondry.variable} antialiased`}

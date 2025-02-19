@@ -11,7 +11,7 @@ import React from "react";
 const Features = () => {
   return (
     <div className="md:py-5 py-10" id="features">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-10 border-b-2 border-dashed">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-base/7 font-semibold text-gray-900  dark:text-zinc-200">
             Post when You Want
@@ -34,7 +34,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 w-full sm:mt-20 lg:mt-24">
+        <div className="mx-auto mt-16 w-full sm:mt-20 lg:mt-24 ">
           <dl className="flex flex-wrap flex-col md:flex-row gap-y-16">
             <div className="relative pl-16 w-full md:w-1/2 lg:w-1/3">
               <dt className="text-base/7 font-semibold text-gray-900 dark:text-zinc-200">
@@ -92,7 +92,7 @@ const Features = () => {
                 Analysis on post
               </dt>
               <dd className="mt-2 text-base/7 text-gray-900 dark:text-zinc-200">
-                Gain insights into your posts' performance with real-time
+                Gain insights into your posts&apos; performance with real-time
                 analytics and reports.
               </dd>
             </div>
