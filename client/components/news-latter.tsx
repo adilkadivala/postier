@@ -17,7 +17,7 @@ import {
   Send,
 } from "lucide-react";
 
-export default function NewsletterSection<FC>() {
+export default function NewsletterSection() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
