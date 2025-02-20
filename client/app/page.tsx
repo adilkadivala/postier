@@ -5,6 +5,7 @@ import Features from "@/components/features";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
+import NewsLatter from "@/components/news-latter";
 import Pricing from "@/components/pricing";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
           <Clouds />
           <Features />
           <Pricing />
+          <NewsLatter />
         </main>
       </BackgroundPattern>
       <Footer />

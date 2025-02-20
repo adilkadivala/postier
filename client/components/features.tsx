@@ -14,7 +14,7 @@ const Features = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-10 border-b-2 border-dashed">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-base/7 font-semibold text-gray-900  dark:text-zinc-200">
-            Post when You Want
+            Post For Better Effect
           </h2>
           <p
             className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900
