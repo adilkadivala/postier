@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <div className="relative">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 -z-20">
         <div className="absolute text-indigo-400/25 top-10 left-32 animate-pulse">
           <IconBrandLinkedin  className="size-5" />
         </div>
