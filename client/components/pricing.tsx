@@ -1,34 +1,41 @@
 import { Check } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 
 const Pricing = () => {
   return (
     <div className="relative isolate px-6 lg:px-8 py-10 " id="pricing">
       <div className="mx-auto max-w-4xl text-center">
-        <p className="mt-2 font-semibold tracking-tight text-balance text-gray-900 dark:text-gray-300  text-3xl">
-          Choose the right plan for you
+        <p className="mt-2 font-semibold text-4xl tracking-tight text-balance text-gray-900 dark:text-gray-300">
+          Choose the{" "}
+          <span className="border-b-2 border-b-indigo-600 dark:border-b-zinc-400 border-dashed">
+            right plan
+          </span>{" "}
+          for you
         </p>
       </div>
       <p className="mx-auto mt-6 max-w-2xl text-center font-medium text-pretty text-gray-900 dark:text-gray-300 text-xl/8">
-        Choose an affordable plan that&apos;s packed with the best features for
-        engaging your audience, creating customer loyalty, and driving sales.
+        Choose an{" "}
+        <span className="border-b-2 border-b-indigo-600 dark:border-b-zinc-400 border-dashed">
+          affordable plan{" "}
+        </span>{" "}
+        that&apos;s packed with the best features for engaging your audience,
+        creating customer loyalty, and driving sales.
       </p>
       <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 lg:max-w-6xl lg:grid-cols-3 border-b-2 pb-10 border-dashed">
-        <div className="rounded-3xl rounded-t-3xl  border border-t-gray-600 border-l-gray-600 border-b-gray-600 border-dashed mx-8 rounded-b-none p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl">
+        <div className="rounded-3xl rounded-t-3xl border border-gray-600 md:border-t-gray-600  md:border-l-gray-600  md:border-b-gray-600 border-dashed mx-5 rounded-b-none p-5 md:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl">
           <h3
             id="tier-hobby"
-            className="text-base/7 font-semibold text-indigo-600"
+            className="text-base/7 text-center font-semibold text-indigo-600"
           >
-            Hobby
+            Free
           </h3>
           <p className="mt-4 flex items-baseline gap-x-2">
             <span className="text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-300">
-              $29
+              $0.00
             </span>
-            <span className="text-base text-gray-500">/month</span>
+            <span className="text-base text-gray-500">up to month</span>
           </p>
-          <p className="mt-6 text-base/7 text-gray-900 dark:text-gray-300">
+          <p className="mt-6 text-base/7 text-center text-gray-900 dark:text-gray-300">
             The perfect plan if you&#039;re just getting started with our
             product.
           </p>
@@ -61,12 +68,12 @@ const Pricing = () => {
             Get started today
           </Link>
         </div>
-        <div className="relative rounded-3xl bg-indigo-400 shadow-2xl p-10">
+        <div className="relative rounded-3xl bg-indigo-600 shadow-2xl p-10">
           <h3
             id="tier-enterprise"
-            className="text-base/7 font-semibold text-indigo-900"
+            className="text-base/7 text-center font-semibold text-indigo-200"
           >
-            Enterprise
+            Elite
           </h3>
           <p className="mt-4 flex items-baseline gap-x-2">
             <span className="text-5xl font-semibold tracking-tight text-white">
@@ -74,32 +81,32 @@ const Pricing = () => {
             </span>
             <span className="text-base text-zinc-300">/month</span>
           </p>
-          <p className="mt-6 text-base/7 text-zinc-200">
+          <p className="mt-6 text-base/7 text-center text-zinc-200">
             Dedicated support and infrastructure for your company.
           </p>
           <ul role="list" className="mt-8 space-y-3 text-sm/6 text-gray-300">
             <li className="flex gap-x-3 text-zinc-200">
-              <Check className="text-gray-900 dark:text-indigo-600" />
+              <Check className="text-gray-50 dark:text-indigo-300" />
               Unlimited products
             </li>
             <li className="flex gap-x-3 text-zinc-200">
-              <Check className="text-gray-900 dark:text-indigo-600" />
+              <Check className="text-gray-50 dark:text-indigo-300" />
               Unlimited subscribers
             </li>
             <li className="flex gap-x-3 text-zinc-200">
-              <Check className="text-gray-900 dark:text-indigo-600" />
+              <Check className="text-gray-50 dark:text-indigo-300" />
               Advanced analytics
             </li>
             <li className="flex gap-x-3 text-zinc-200">
-              <Check className="text-gray-900 dark:text-indigo-600" />
+              <Check className="text-gray-50 dark:text-indigo-300" />
               Dedicated support representative
             </li>
             <li className="flex gap-x-3 text-zinc-200">
-              <Check className="text-gray-900 dark:text-indigo-600" />
+              <Check className="text-gray-50 dark:text-indigo-300" />
               Marketing automations
             </li>
             <li className="flex gap-x-3 text-zinc-200">
-              <Check className="text-gray-900 dark:text-indigo-600" />
+              <Check className="text-gray-50 dark:text-indigo-300" />
               Custom integrations
             </li>
           </ul>
@@ -111,20 +118,20 @@ const Pricing = () => {
             Get started today
           </Link>
         </div>
-        <div className="rounded-3xl rounded-t-3xl  border border-t-gray-600 border-r-gray-600 border-b-gray-600 border-dashed mx-8 rounded-b-none p-10 lg:mx-0 lg:rounded-tl-none lg:rounded-br-3xl">
+        <div className="rounded-3xl rounded-t-3xl border border-gray-600 md:border-t-gray-600  md:border-r-gray-600  md:border-b-gray-600 border-dashed mx-5 rounded-b-none p-5 md:p-10 lg:mx-0 lg:rounded-tl-none lg:rounded-br-3xl">
           <h3
             id="tier-hobby"
-            className="text-base/7 font-semibold text-indigo-600"
+            className="text-base/7 text-center font-semibold text-indigo-600"
           >
-            Hobby
+            Custome
           </h3>
           <p className="mt-4 flex items-baseline gap-x-2">
             <span className="text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-300">
-              $29
+              $59
             </span>
             <span className="text-base text-gray-500">/month</span>
           </p>
-          <p className="mt-6 text-base/7 text-gray-900 dark:text-gray-300">
+          <p className="mt-6 text-base/7 text-center text-gray-900 dark:text-gray-300">
             The perfect plan if you&#039;re just getting started with our
             product.
           </p>
