@@ -1,4 +1,3 @@
-import Brand from "./brand.svg";
 import FirstLogoWhite from "./logo-first-white.svg";
 import FirstLogoDark from "./logo-first-dark.svg";
 import SecondLogoWhite from "./second-logo-white.svg";
@@ -14,7 +13,6 @@ import Feature1 from "./feature_1.png";
 import FavIcon from "./favicon.svg";
 
 export {
-  Brand,
   FirstLogoWhite,
   FirstLogoDark,
   SecondLogoDark,

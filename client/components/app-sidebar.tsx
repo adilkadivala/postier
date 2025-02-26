@@ -21,42 +21,13 @@ import {
 import Link from "next/link";
 import { Separator } from "./ui/separator";
 import Theme from "./theme";
-
-
+import { menuItems } from "@/constant/app-sidebar";
 
 const headingItem = [
   {
     title: "Postier",
     url: "/",
     icon: PlaneTakeoff,
-  },
-];
-
-const menuItems = [
-  {
-    title: "History",
-    url: "/history",
-    icon: History,
-  },
-  {
-    title: "Analytics",
-    url: "/history",
-    icon: ChartNoAxesColumn,
-  },
-  {
-    title: "Create-Post",
-    url: "/history",
-    icon: MessageSquareShare,
-  },
-  {
-    title: "Scheduled",
-    url: "/schedule",
-    icon: ClockArrowUp,
-  },
-  {
-    title: "Posted",
-    url: "/history",
-    icon: CalendarCheck,
   },
 ];
 
@@ -86,7 +57,7 @@ export function AppSidebar() {
 
           {/* Sidebar menu */}
           <SidebarGroupContent>
-            <SidebarMenu className="pt-5 h-96">
+            <SidebarMenu className="pt-5">
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
@@ -98,16 +69,7 @@ export function AppSidebar() {
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
-            <Separator />
           </SidebarGroupContent>
-
-          <SidebarMenu className="pt-4">
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Theme />
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
