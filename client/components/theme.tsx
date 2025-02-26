@@ -3,13 +3,6 @@
 import React from "react";
 import { useTheme } from "next-themes";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -19,7 +12,7 @@ import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
 
 const Theme = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
