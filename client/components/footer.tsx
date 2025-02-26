@@ -5,10 +5,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer >
+    <footer>
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="flex flex-col md:flex-row gap-y-5 items-center justify-between">
-          <Link href="/" >
+          <Link href="/">
             <span className="flex items-center">
               P
               <span>
@@ -56,19 +56,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <hr className="my-5 mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-5 mx-auto border-b-2 border-gray-400/20 dark:border-zinc-50/10 border-dashed" />
         <span className="flex items-center flex-col md:flex-row justify-center gap-5 text-sm text-gray-500 text-center dark:text-gray-400">
-          © {currentYear}{" "}
-          <Link href="/">
-            <span className="flex items-center">
-              P
-              <span>
-                <PlaneTakeoff />
-              </span>
-              stier™
-            </span>
-          </Link>
-          . All Rights Reserved.
+          © {currentYear} . All Rights Reserved.
         </span>
       </div>
     </footer>

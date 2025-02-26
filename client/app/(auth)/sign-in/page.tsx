@@ -5,7 +5,7 @@ import Image from "next/image";
 import { SignIn, ClerkLoaded, ClerkLoading, useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { Brand } from "@/public";
+import { FavIcon } from "@/public";
 
 export default function Page() {
   const { isSignedIn, isLoaded } = useUser();
@@ -29,9 +29,9 @@ export default function Page() {
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
       <div className="h-full lg:flex flex-col items-center justify-center px-4">
         <div className="text-center space-y-4 pt-16">
-          <h1 className="font-bold text-3xl text-[#2e2a47]">Welcome Back</h1>
-          <p className="text-base text-[#7e8ca0]">
-            Log in or create an account to get back to your dashboard!
+          <h1 className="font-bold text-3xl text-gray-600 dark:text-gray-300">Welcome Back</h1>
+          <p className="text-base text-gray-600 dark:text-gray-300">
+            Log in to account for getting back to your schedules!
           </p>
         </div>
         <div className="flex items-center justify-center mt-8">
@@ -49,7 +49,7 @@ export default function Page() {
         </div>
       </div>
       <div className="h-full bg-blue-600 hidden lg:flex items-center justify-center">
-        <Image src={Brand} height={100} width={100} alt="Side-logo" />
+        <Image src={FavIcon} height={100} width={100} alt="Side-logo" />
       </div>
     </div>
   );

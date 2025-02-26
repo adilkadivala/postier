@@ -9,11 +9,17 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-3xl supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-14 mx-auto w-5/6 items-center justify-between md:justify-center">
         {/* Logo */}
         <Link href="/" className="flex items-center w-1/4 font-semibold">
-          <span className="flex items-center">P<span><PlaneTakeoff /></span>stier</span>
+          <span className="flex items-center">
+            P
+            <span>
+              <PlaneTakeoff />
+            </span>
+            stier
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
