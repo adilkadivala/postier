@@ -9,7 +9,7 @@ const MakeXPost = () => {
   const { message, isLoading, tweet, setTweet, handleTweet } =
     useTweetHandler();
   return (
-    <>
+    <div>
       <Button onClick={handleLogin}>Login with Twitter</Button>
       <Textarea
         placeholder="What do you want to tweet today? 🤗"
@@ -21,10 +21,10 @@ const MakeXPost = () => {
         onClick={() => handleTweet("http://localhost:8000/tweet")}
         disabled={isLoading}
       >
-        {isLoading ? "Tweeting..." : "Tweet"}
+        {isLoading ? "posting..." : "post"}
       </Button>
       {message && <p className="text-sm text-gray-500">{message}</p>}
-    </>
+    </div>
   );
 };
 

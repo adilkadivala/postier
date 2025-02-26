@@ -28,7 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="flex h-12 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex items-center justify-between w-full gap-2 px-4">
             <SidebarTrigger />
             <Breadcrumb className="flex flex-1">
@@ -50,8 +50,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Theme />
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <main>{children}</main>
+        <div className="flex flex-1 flex-col gap-4 border-l border-t rounded-md ml-2">
+          <main className="p-2 bg-sidebar">{children}</main>
         </div>
       </SidebarInset>
     </SidebarProvider>
